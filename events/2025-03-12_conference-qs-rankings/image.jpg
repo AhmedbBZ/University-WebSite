@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="evbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0D2B5E"/>
+      <stop offset="100%" stop-color="#1A5276"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#evbg)"/>
+  <!-- Salle de conférence stylisée -->
+  <ellipse cx="400" cy="280" rx="300" ry="60" fill="rgba(200,169,81,0.1)" stroke="rgba(200,169,81,0.3)" stroke-width="1"/>
+  <!-- Personnes assises -->
+  <circle cx="250" cy="240" r="18" fill="rgba(200,169,81,0.4)"/>
+  <circle cx="320" cy="235" r="18" fill="rgba(200,169,81,0.35)"/>
+  <circle cx="400" cy="232" r="18" fill="rgba(200,169,81,0.5)"/>
+  <circle cx="480" cy="235" r="18" fill="rgba(200,169,81,0.35)"/>
+  <circle cx="550" cy="240" r="18" fill="rgba(200,169,81,0.4)"/>
+  <!-- Écran -->
+  <rect x="300" y="100" width="200" height="120" rx="6" fill="#071A3E" stroke="rgba(200,169,81,0.5)" stroke-width="2"/>
+  <text x="400" y="155" font-family="Arial,sans-serif" font-size="16" fill="#C8A951"
+        text-anchor="middle" font-weight="bold">QS Rankings 2025</text>
+  <text x="400" y="178" font-family="Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.7)"
+        text-anchor="middle">Conférence Internationale</text>
+  <!-- Titre -->
+  <text x="400" y="370" font-family="Georgia,serif" font-size="20" fill="white"
+        text-anchor="middle" font-weight="bold">Conférence QS Rankings 2025</text>
+  <text x="400" y="400" font-family="Arial,sans-serif" font-size="13" fill="#C8A951"
+        text-anchor="middle">12 mars 2025 – Université de la Manouba</text>
+</svg>

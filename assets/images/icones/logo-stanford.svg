@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Logo Stanford University — Emblème S & Arbre Séquoia Redwood -->
+  <circle cx="100" cy="100" r="96" fill="#8C1515" stroke="#B89B5E" stroke-width="4"/>
+  <circle cx="100" cy="100" r="84" fill="#8C1515" stroke="white" stroke-width="2" stroke-dasharray="4 3"/>
+  
+  <!-- Grand 'S' Stylisé -->
+  <path d="M72 70 C72 55, 128 55, 128 72 C128 92, 72 90, 72 115 C72 138, 128 138, 128 122" 
+        stroke="white" stroke-width="14" stroke-linecap="round" fill="none"/>
+  
+  <!-- Arbre Séquoia Redwood (Stanford Redwood Tree) -->
+  <path d="M100 50 L108 65 L104 65 L112 80 L107 80 L115 98 L108 98 L118 118 L104 118 L104 135 L96 135 L96 118 L82 118 L92 98 L85 98 L93 80 L88 80 L96 65 L92 65 Z" 
+        fill="#2E7D32" stroke="white" stroke-width="2"/>
+  <rect x="96" y="132" width="8" height="12" fill="#5D4037"/>
+
+  <!-- Étoile et texte Stanford -->
+  <text x="100" y="166" font-family="'Playfair Display', Georgia, serif" font-size="14" font-weight="bold"
+        fill="#F4E8C1" text-anchor="middle" letter-spacing="3">STANFORD</text>
+  <text x="100" y="180" font-family="'Inter', sans-serif" font-size="7"
+        fill="white" text-anchor="middle" letter-spacing="1.5">RANKINGS OFFICE</text>
+</svg>

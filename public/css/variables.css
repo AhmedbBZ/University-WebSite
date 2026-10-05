@@ -1,0 +1,93 @@
+/*
+ * variables.css — Design tokens centralisés
+ * ==========================================
+ * Modifiez ici pour changer toute la charte graphique du site.
+ */
+
+:root {
+  /* ── Couleurs principales ──────────────────────────────────── */
+  --color-primary:        #0D2B5E;   /* Bleu marine profond */
+  --color-primary-light:  #1A3F7A;
+  --color-primary-dark:   #071A3E;
+  --color-accent:         #C8A951;   /* Or académique */
+  --color-accent-light:   #E2C97A;
+  --color-accent-dark:    #A88A35;
+
+  /* ── Tons neutres ──────────────────────────────────────────── */
+  --color-bg:             #F5F5F0;   /* Blanc cassé chaud */
+  --color-bg-card:        #FFFFFF;
+  --color-bg-dark:        #0A1F3D;
+  --color-text:           #1C1C2E;
+  --color-text-muted:     #5A6070;
+  --color-text-light:     #FFFFFF;
+  --color-border:         #DDE1E9;
+  --color-border-accent:  #C8A951;
+
+  /* ── Surfaces / overlays ───────────────────────────────────── */
+  --color-overlay:        rgba(13, 43, 94, 0.75);
+  --color-card-shadow:    rgba(13, 43, 94, 0.10);
+  --color-card-shadow-h:  rgba(13, 43, 94, 0.20);
+
+  /* ── Typographie ───────────────────────────────────────────── */
+  --font-primary:   'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-display:   'Playfair Display', Georgia, serif;
+
+  --text-xs:    0.75rem;
+  --text-sm:    0.875rem;
+  --text-base:  1rem;
+  --text-lg:    1.125rem;
+  --text-xl:    1.25rem;
+  --text-2xl:   1.5rem;
+  --text-3xl:   1.875rem;
+  --text-4xl:   2.25rem;
+  --text-5xl:   3rem;
+  --text-6xl:   3.75rem;
+
+  --fw-normal:  400;
+  --fw-medium:  500;
+  --fw-semi:    600;
+  --fw-bold:    700;
+
+  --lh-tight:   1.2;
+  --lh-snug:    1.4;
+  --lh-normal:  1.6;
+  --lh-loose:   1.8;
+
+  /* ── Espacements ───────────────────────────────────────────── */
+  --space-1:   0.25rem;
+  --space-2:   0.5rem;
+  --space-3:   0.75rem;
+  --space-4:   1rem;
+  --space-5:   1.25rem;
+  --space-6:   1.5rem;
+  --space-8:   2rem;
+  --space-10:  2.5rem;
+  --space-12:  3rem;
+  --space-16:  4rem;
+  --space-20:  5rem;
+  --space-24:  6rem;
+
+  /* ── Rayons de bordure ─────────────────────────────────────── */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --radius-full: 9999px;
+
+  /* ── Transitions ───────────────────────────────────────────── */
+  --transition-fast:   150ms ease;
+  --transition-base:   250ms ease;
+  --transition-slow:   400ms ease;
+
+  /* ── Ombres ────────────────────────────────────────────────── */
+  --shadow-sm:  0 1px 3px var(--color-card-shadow);
+  --shadow-md:  0 4px 12px var(--color-card-shadow);
+  --shadow-lg:  0 8px 30px var(--color-card-shadow);
+  --shadow-xl:  0 20px 60px var(--color-card-shadow);
+  --shadow-hover: 0 8px 30px var(--color-card-shadow-h);
+
+  /* ── Layout ────────────────────────────────────────────────── */
+  --max-width:      1200px;
+  --header-height:  70px;
+  --btn-fixed-h:    52px;
+}

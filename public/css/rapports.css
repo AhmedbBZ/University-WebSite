@@ -1,0 +1,130 @@
+/*
+ * rapports.css — Styles de la page Rapports
+ */
+
+/* ── Section rapports ────────────────────────────────────────────────────── */
+.reports-section {
+  padding: var(--space-16) 0 var(--space-24);
+}
+
+/* ── Liste des rapports ──────────────────────────────────────────────────── */
+.reports-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* ── Élément rapport ─────────────────────────────────────────────────────── */
+.report-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+.report-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--color-primary), var(--color-accent));
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform var(--transition-base);
+}
+.report-item:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-accent);
+}
+.report-item:hover::before {
+  transform: scaleY(1);
+}
+
+/* Icône PDF */
+.report-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 3px 10px rgba(220,38,38,0.2);
+}
+
+/* Corps */
+.report-body {
+  flex: 1;
+  min-width: 0;
+}
+.report-title {
+  font-size: var(--text-base);
+  font-weight: var(--fw-semi);
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.report-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+.report-meta .sep { color: var(--color-border); }
+
+/* Bouton télécharger */
+.report-download {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-medium);
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+.report-item:hover .report-download {
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border-color: var(--color-primary);
+}
+
+/* ── Barre d'outils ──────────────────────────────────────────────────────── */
+.reports-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+.reports-count {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+.reports-count strong { color: var(--color-primary); }
+
+@media (max-width: 640px) {
+  .report-item { flex-direction: column; align-items: flex-start; }
+  .report-download { align-self: flex-end; }
+}

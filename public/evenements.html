@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Événements – Classements UMA</title>
+  <meta name="description" content="Événements liés aux classements internationaux de l'Université de la Manouba : conférences, webinaires, cérémonies.">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/methodologie.css"><!-- page-hero -->
+  <link rel="stylesheet" href="css/evenements.css">
+  <link rel="icon" href="/assets/images/icones/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <!-- ═══ HEADER (injecté par JS) ═══════════════════════════════════════════ -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <!-- ═══ HERO DE PAGE ════════════════════════════════════════════════════ -->
+    <section class="page-hero" aria-label="Titre de la page">
+      <div class="container page-hero-inner">
+        <div class="page-hero-label" aria-hidden="true">Actualités</div>
+        <h1>Événements</h1>
+        <p class="page-hero-sub">
+          Conférences, webinaires et cérémonies liés aux classements internationaux
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ SECTION ÉVÉNEMENTS ════════════════════════════════════════════════ -->
+    <section class="events-section" aria-label="Liste des événements">
+      <div class="container">
+
+        <div class="events-toolbar">
+          <p class="events-count" id="events-counter" aria-live="polite">
+            <!-- Peuplé par evenements.js -->
+          </p>
+          <span style="font-size:var(--text-xs);color:var(--color-text-muted)">
+            Triés du plus récent au plus ancien
+          </span>
+        </div>
+
+        <!-- Grille peuplée par evenements.js -->
+        <div class="events-grid" id="events-grid" role="list" aria-label="Événements">
+          <!-- Loader initial -->
+          <div class="loader" style="grid-column:1/-1"><div class="spinner"></div></div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER (injecté par JS) ════════════════════════════════════════════ -->
+  <div id="footer-placeholder"></div>
+
+  <!-- ═══ SCRIPTS ════════════════════════════════════════════════════════════ -->
+  <script src="js/common.js"></script>
+  <script src="js/evenements.js"></script>
+
+</body>
+</html>

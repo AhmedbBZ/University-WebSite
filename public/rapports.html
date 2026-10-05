@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Rapports – Classements UMA</title>
+  <meta name="description" content="Téléchargez les rapports officiels sur les classements internationaux de l'Université de la Manouba.">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/methodologie.css"><!-- page-hero -->
+  <link rel="stylesheet" href="css/rapports.css">
+  <link rel="icon" href="/assets/images/icones/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <!-- ═══ HEADER (injecté par JS) ═══════════════════════════════════════════ -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <!-- ═══ HERO DE PAGE ════════════════════════════════════════════════════ -->
+    <section class="page-hero" aria-label="Titre de la page">
+      <div class="container page-hero-inner">
+        <div class="page-hero-label" aria-hidden="true">Documents officiels</div>
+        <h1>Rapports</h1>
+        <p class="page-hero-sub">
+          Rapports annuels et bilans des classements internationaux de l'université
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ SECTION RAPPORTS ══════════════════════════════════════════════════ -->
+    <section class="reports-section" aria-label="Liste des rapports">
+      <div class="container">
+
+        <div class="reports-toolbar">
+          <p class="reports-count" id="reports-counter" aria-live="polite">
+            <!-- Peuplé par rapports.js -->
+          </p>
+          <span style="font-size:var(--text-xs);color:var(--color-text-muted)">
+            Triés du plus récent au plus ancien — Format PDF
+          </span>
+        </div>
+
+        <!-- Liste peuplée par rapports.js -->
+        <div class="reports-list" id="reports-list" role="list" aria-label="Rapports téléchargeables">
+          <!-- Loader initial -->
+          <div class="loader"><div class="spinner"></div></div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER (injecté par JS) ════════════════════════════════════════════ -->
+  <div id="footer-placeholder"></div>
+
+  <!-- ═══ SCRIPTS ════════════════════════════════════════════════════════════ -->
+  <script src="js/common.js"></script>
+  <script src="js/rapports.js"></script>
+
+</body>
+</html>

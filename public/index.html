@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <title>Université de la Manouba – Classements Internationaux</title>
+  <meta name="description" content="Découvrez les classements internationaux de l'Université de la Manouba : QS World, QS Arab Region, Times Higher Education et plus encore.">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="/assets/images/icones/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <!-- ═══ HEADER (injecté par JS) ═══════════════════════════════════════════ -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <!-- ═══ SECTION 1 : HERO ════════════════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Présentation">
+      <div class="hero-bg" id="hero-bg" role="img" aria-label="Image de classement universitaire"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <div class="hero-badge" aria-hidden="true">
+          <span class="dot"></span>
+          <span>Classements Internationaux 2024–2025</span>
+        </div>
+
+        <h1 class="hero-title">
+          <em>L'excellence académique</em><br>
+          reconnue à l'échelle mondiale
+        </h1>
+
+        <p class="hero-slogan" id="hero-slogan">
+          <!-- Peuplé par index.js depuis le XML -->
+        </p>
+
+        <div class="hero-actions">
+          <a href="methodologie.html?id=qs1" class="btn-primary" id="btn-qs">
+            🏆 Classement QS →
+          </a>
+          <a href="methodologie.html?id=the"
+             style="color:rgba(255,255,255,0.75);font-size:var(--text-sm);text-decoration:underline;text-underline-offset:3px">
+            Voir classement THE
+          </a>
+        </div>
+
+        <div class="hero-stats" aria-label="Chiffres clés">
+          <div class="hero-stat">
+            <span class="hero-stat-value" aria-label="Présent dans les classements QS">QS</span>
+            <span class="hero-stat-label">Classements QS</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value" aria-label="Présent dans Times Higher Education">THE</span>
+            <span class="hero-stat-label">Times Higher Ed.</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value" aria-label="Depuis 2000">2000</span>
+            <span class="hero-stat-label">Fondée en</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Défiler</span>
+        <span class="scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- ═══ SECTION 2 : UNIVERSITÉ ══════════════════════════════════════════ -->
+    <section class="section-universite" id="universite" aria-label="Présentation de l'université">
+      <div class="container">
+        <div class="univ-grid">
+
+          <div class="univ-image-wrap fade-up">
+            <img
+              src="/assets/images/universite/campus.jpg"
+              alt="Campus de l'Université de la Manouba"
+              id="univ-image"
+              loading="lazy"
+              onerror="this.src='/assets/images/universite/campus-placeholder.jpg';this.onerror=null">
+            <div class="univ-image-badge" aria-hidden="true">Campus Principal</div>
+          </div>
+
+          <div class="univ-text fade-up delay-2">
+            <span class="section-label">Notre université</span>
+            <h2 class="section-heading" id="univ-titre">
+              <!-- Peuplé par index.js -->
+            </h2>
+            <div class="divider"></div>
+            <p class="section-sub" id="univ-texte">
+              <!-- Peuplé par index.js -->
+            </p>
+            <a href="methodologie.html" class="btn-primary" style="display:inline-flex;margin-top:2rem">
+              Voir nos classements →
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SECTION 3 : POINTS FORTS ════════════════════════════════════════ -->
+    <section class="section-points-forts" id="points-forts" aria-label="Points forts">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Ce qui nous distingue</span>
+          <h2 class="section-heading">Nos points forts</h2>
+          <div class="divider centered"></div>
+          <p class="section-sub" style="margin-inline:auto;text-align:center">
+            L'Université de la Manouba s'appuie sur des piliers solides pour rayonner à l'international.
+          </p>
+        </div>
+
+        <!-- Peuplé par index.js -->
+        <div class="points-grid" id="points-forts-grid" role="list">
+          <!-- Loader initial -->
+          <div class="loader" style="grid-column:1/-1"><div class="spinner"></div></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER (injecté par JS) ════════════════════════════════════════════ -->
+  <div id="footer-placeholder"></div>
+
+  <!-- ═══ SCRIPTS ════════════════════════════════════════════════════════════ -->
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
+
+</body>
+</html>
