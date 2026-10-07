@@ -6,27 +6,27 @@
 
 :root {
   /* ── Couleurs principales ──────────────────────────────────── */
-  --color-primary:        #0D2B5E;   /* Bleu marine profond */
-  --color-primary-light:  #1A3F7A;
-  --color-primary-dark:   #071A3E;
-  --color-accent:         #C8A951;   /* Or académique */
-  --color-accent-light:   #E2C97A;
-  --color-accent-dark:    #A88A35;
+  --color-primary:        #064E3B;   /* Vert émeraude profond */
+  --color-primary-light:  #047857;
+  --color-primary-dark:   #022C22;
+  --color-accent:         #D97706;   /* Ambre / Or chaleureux */
+  --color-accent-light:   #F59E0B;
+  --color-accent-dark:    #B45309;
 
   /* ── Tons neutres ──────────────────────────────────────────── */
-  --color-bg:             #F5F5F0;   /* Blanc cassé chaud */
+  --color-bg:             #F8FAFC;   /* Slate très clair et moderne */
   --color-bg-card:        #FFFFFF;
-  --color-bg-dark:        #0A1F3D;
-  --color-text:           #1C1C2E;
-  --color-text-muted:     #5A6070;
+  --color-bg-dark:        #022C22;
+  --color-text:           #0F172A;
+  --color-text-muted:     #475569;
   --color-text-light:     #FFFFFF;
-  --color-border:         #DDE1E9;
-  --color-border-accent:  #C8A951;
+  --color-border:         #E2E8F0;
+  --color-border-accent:  #D97706;
 
   /* ── Surfaces / overlays ───────────────────────────────────── */
-  --color-overlay:        rgba(13, 43, 94, 0.75);
-  --color-card-shadow:    rgba(13, 43, 94, 0.10);
-  --color-card-shadow-h:  rgba(13, 43, 94, 0.20);
+  --color-overlay:        rgba(6, 78, 59, 0.85);
+  --color-card-shadow:    rgba(6, 78, 59, 0.08);
+  --color-card-shadow-h:  rgba(6, 78, 59, 0.18);
 
   /* ── Typographie ───────────────────────────────────────────── */
   --font-primary:   'Inter', 'Segoe UI', system-ui, sans-serif;

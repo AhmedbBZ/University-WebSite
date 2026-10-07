@@ -1,6 +1,6 @@
 /**
- * rapports.js — Page Rapports
- * ============================
+ * rapports.js — Page Ressources & Documents
+ * ==========================================
  * Charge la liste des rapports depuis /api/reports et les affiche.
  * Chaque élément déclenche le téléchargement du PDF.
  */
@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
  * @param {Document} xml
  */
 async function renderRapportsPage(xml) {
-  const nomUniv = UMA.xmlText(xml, 'universite nom', 'Université de la Manouba');
+  const nomUniv = UMA.xmlText(xml, 'universite nom', 'Stanford University');
   UMA.setPageMeta(
-    `Rapports – Classements UMA`,
-    `Téléchargez les rapports officiels sur les classements internationaux de l'${nomUniv}.`
+    `Ressources & Documents – ${nomUniv}`,
+    `Téléchargez les rapports officiels, guides académiques et publications de ${nomUniv}.`
   );
 
   const list    = document.getElementById('reports-list');
@@ -39,7 +39,7 @@ async function renderRapportsPage(xml) {
     // Compteur
     if (counter) {
       counter.innerHTML = reports.length
-        ? `<strong>${reports.length}</strong> rapport${reports.length > 1 ? 's' : ''} disponible${reports.length > 1 ? 's' : ''}`
+        ? `<strong>${reports.length}</strong> document${reports.length > 1 ? 's' : ''} disponible${reports.length > 1 ? 's' : ''}`
         : '';
     }
 
@@ -47,7 +47,7 @@ async function renderRapportsPage(xml) {
       list.innerHTML = `
         <div class="empty-state">
           <span class="empty-icon" aria-hidden="true">📄</span>
-          <p>Aucun rapport disponible pour le moment.</p>
+          <p>Aucun document disponible pour le moment.</p>
           <small style="color:var(--color-text-muted)">
             Déposez des fichiers PDF dans <code>/reports/</code> au format
             <code>AAAA-MM-JJ_titre.pdf</code>.
@@ -89,11 +89,11 @@ async function renderRapportsPage(xml) {
     }).join('');
 
   } catch (err) {
-    console.error('[UMA] Erreur chargement rapports :', err);
+    console.error('[Stanford] Erreur chargement rapports :', err);
     list.innerHTML = `
       <div class="empty-state">
         <span class="empty-icon" aria-hidden="true">⚠️</span>
-        <p>Impossible de charger les rapports.</p>
+        <p>Impossible de charger les documents.</p>
         <small style="color:var(--color-text-muted)">${err.message}</small>
       </div>`;
   }

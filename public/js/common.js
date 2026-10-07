@@ -49,9 +49,9 @@ function xmlText(doc, selector, fallback = '') {
  * @param {string} pageId — ID de la page active (ex: 'accueil', 'evenements')
  */
 function renderHeader(xml, pageId = '') {
-  const nomUniv    = xmlText(xml, 'universite nom', 'Université de la Manouba');
-  const nomCourt   = xmlText(xml, 'universite nom_court', 'UMA');
-  const logoSrc    = xmlText(xml, 'universite logo', '/assets/images/icones/logo-uma.svg');
+  const nomUniv    = xmlText(xml, 'universite nom', 'Stanford University');
+  const nomCourt   = xmlText(xml, 'universite nom_court', 'Stanford');
+  const logoSrc    = xmlText(xml, 'universite logo', '/assets/images/icones/logo-stanford.svg');
 
   // Construire les items de menu depuis le XML
   const menuItems = Array.from(xml.querySelectorAll('menu > item'));
@@ -117,7 +117,7 @@ function renderHeader(xml, pageId = '') {
                onerror="this.style.display='none'">
           <div class="header-logo-text">
             <span class="header-logo-name">${nomUniv}</span>
-            <span class="header-logo-sub">Classements Internationaux</span>
+            <span class="header-logo-sub">Site Officiel</span>
           </div>
         </a>
 
@@ -228,8 +228,8 @@ function initNavEvents() {
  * @param {Document} xml
  */
 function renderFooter(xml) {
-  const nomUniv  = xmlText(xml, 'universite nom', 'Université de la Manouba');
-  const logoSrc  = xmlText(xml, 'universite logo', '/assets/images/icones/logo-uma.svg');
+  const nomUniv  = xmlText(xml, 'universite nom', 'Stanford University');
+  const logoSrc  = xmlText(xml, 'universite logo', '/assets/images/icones/logo-stanford.svg');
   const aPropos  = xmlText(xml, 'a_propos texte', '');
   const adresse  = xmlText(xml, 'contact adresse', '');
   const email    = xmlText(xml, 'contact email', '');
@@ -263,7 +263,7 @@ function renderFooter(xml) {
         <div class="footer-grid">
           <div class="footer-brand">
             <div class="footer-logo">
-              <img src="${logoSrc}" alt="Logo UMA"
+              <img src="${logoSrc}" alt="Logo ${nomUniv}"
                    onerror="this.style.display='none'">
               <span class="footer-logo-name">${nomUniv}</span>
             </div>
@@ -299,7 +299,7 @@ function renderFooter(xml) {
 
         <div class="footer-bottom">
           <p>© ${year} ${nomUniv} – Tous droits réservés</p>
-          <p>Site dédié aux classements internationaux</p>
+          <p>Portail d'information officiel de l'université</p>
         </div>
       </div>
     </footer>`;
@@ -317,18 +317,18 @@ function renderFooter(xml) {
 // ══════════════════════════════════════════════════════════════
 
 /**
- * Injecte le bouton fixe "Visiter le site officiel" en bas de page.
+ * Injecte le bouton fixe "Visiter le portail officiel" en bas de page.
  * @param {Document} xml
  */
 function renderBoutonOfficiel(xml) {
-  const url  = xmlText(xml, 'universite url_officiel', 'https://www.uma.rnu.tn');
-  const nom  = xmlText(xml, 'universite nom', 'l\'Université de la Manouba');
+  const url  = xmlText(xml, 'universite url_officiel', 'https://www.stanford.edu');
+  const nom  = xmlText(xml, 'universite nom', 'Stanford University');
 
   const btnHTML = `
     <a id="btn-officiel" href="${url}" target="_blank" rel="noopener noreferrer"
-       aria-label="Visiter le site officiel de ${nom}">
+       aria-label="Accéder au portail officiel de ${nom}">
       <span class="icon" aria-hidden="true">🏛️</span>
-      Visiter le site officiel de l'université
+      Accéder au portail officiel Stanford
       <span class="icon" aria-hidden="true">↗</span>
     </a>`;
 
@@ -450,7 +450,7 @@ async function initPage({ pageId = '', onReady = null } = {}) {
     });
 
   } catch (err) {
-    console.error('[UMA Classements] Erreur d\'initialisation :', err);
+    console.error('[Stanford] Erreur d\'initialisation :', err);
     // Affichage dégradé en cas d'erreur
     const placeholder = document.getElementById('header-placeholder');
     if (placeholder) {

@@ -1,6 +1,6 @@
 /**
- * evenements.js — Page Événements
- * =================================
+ * evenements.js — Page Événements & Vie du Campus
+ * ================================================
  * Charge la liste des événements depuis /api/events et les affiche
  * dans une grille de cartes.
  */
@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
  * @param {Document} xml
  */
 async function renderEvenementsPage(xml) {
-  const nomUniv = UMA.xmlText(xml, 'universite nom', 'Université de la Manouba');
+  const nomUniv = UMA.xmlText(xml, 'universite nom', 'Stanford University');
   UMA.setPageMeta(
-    `Événements – Classements UMA`,
-    `Retrouvez tous les événements liés aux classements internationaux de l'${nomUniv}.`
+    `Événements & Vie du Campus – ${nomUniv}`,
+    `Retrouvez les événements, conférences et cérémonies de ${nomUniv}.`
   );
 
   const grid    = document.getElementById('events-grid');
@@ -99,7 +99,7 @@ async function renderEvenementsPage(xml) {
     });
 
   } catch (err) {
-    console.error('[UMA] Erreur chargement événements :', err);
+    console.error('[Stanford] Erreur chargement événements :', err);
     grid.innerHTML = `
       <div class="empty-state" style="grid-column:1/-1">
         <span class="empty-icon" aria-hidden="true">⚠️</span>

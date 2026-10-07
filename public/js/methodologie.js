@@ -1,7 +1,7 @@
 /**
- * methodologie.js — Page Méthodologie
- * =====================================
- * Lit l'id dans l'URL et affiche la méthodologie correspondante depuis le XML.
+ * methodologie.js — Page Programmes & Académique
+ * ===============================================
+ * Lit l'id dans l'URL et affiche le programme / la faculté correspondante depuis le XML.
  * Affiche une page 404 si l'id n'existe pas.
  */
 
@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Peuple la page méthodologie depuis le XML.
+ * Peuple la page académique depuis le XML.
  * @param {Document} xml
  */
 async function renderMethodologiePage(xml) {
-  const nomUniv = UMA.xmlText(xml, 'universite nom', 'Université de la Manouba');
+  const nomUniv = UMA.xmlText(xml, 'universite nom', 'Stanford University');
 
   // Récupérer l'id depuis l'URL
   const params = new URLSearchParams(window.location.search);
@@ -27,12 +27,12 @@ async function renderMethodologiePage(xml) {
   if (!main) return;
 
   if (!id) {
-    // Pas d'id → liste de toutes les méthodologies
+    // Pas d'id → liste de tous les programmes
     renderListeMethodologies(xml, main, nomUniv);
     return;
   }
 
-  // Chercher la méthodologie dans le XML
+  // Chercher la méthodologie / le programme dans le XML
   const methodo = xml.querySelector(`methodologie[id="${CSS.escape(id)}"]`);
 
   if (!methodo) {
@@ -49,15 +49,15 @@ async function renderMethodologiePage(xml) {
   const lien   = UMA.xmlText(methodo, 'lien',   '');
 
   UMA.setPageMeta(
-    `${nom} – Classements UMA`,
-    `Classement de l'Université de la Manouba selon ${nom} : rang ${rang}, année ${annee}.`
+    `${nom} – ${nomUniv}`,
+    `Présentation du programme ${nom} à Stanford University : diplômes, cursus et ressources.`
   );
 
   // Mettre à jour le titre et sous-titre du hero
   const heroTitle = document.getElementById('page-hero-title');
   const heroSub   = document.getElementById('page-hero-sub');
   if (heroTitle) heroTitle.textContent = nom;
-  if (heroSub)   heroSub.textContent = `Classement de l'${nomUniv}`;
+  if (heroSub)   heroSub.textContent = `Offre de formation de ${nomUniv}`;
 
   // Breadcrumb
   const breadcrumb = document.getElementById('methodo-breadcrumb');
@@ -65,29 +65,29 @@ async function renderMethodologiePage(xml) {
     breadcrumb.innerHTML = `
       <a href="index.html">Accueil</a>
       <span class="sep">›</span>
-      <a href="#">Méthodologie</a>
+      <a href="methodologie.html">Programmes &amp; Académique</a>
       <span class="sep">›</span>
       <span>${nom}</span>`;
   }
 
-  // Blocs visuels de classement
+  // Blocs visuels de présentation du programme
   const rankingShowcase = document.getElementById('ranking-showcase');
   if (rankingShowcase) {
     rankingShowcase.innerHTML = `
       <div class="ranking-card accent fade-up">
-        <span class="ranking-card-icon" aria-hidden="true">🏅</span>
+        <span class="ranking-card-icon" aria-hidden="true">🎓</span>
         <div class="ranking-card-value">${rang}</div>
-        <div class="ranking-card-label">Rang mondial</div>
+        <div class="ranking-card-label">Spécialités / Départements</div>
       </div>
       <div class="ranking-card fade-up delay-1">
-        <span class="ranking-card-icon" aria-hidden="true">📈</span>
+        <span class="ranking-card-icon" aria-hidden="true">👥</span>
         <div class="ranking-card-value">${score}</div>
-        <div class="ranking-card-label">Score</div>
+        <div class="ranking-card-label">Effectifs &amp; Statut</div>
       </div>
       <div class="ranking-card fade-up delay-2">
         <span class="ranking-card-icon" aria-hidden="true">📅</span>
         <div class="ranking-card-value">${annee}</div>
-        <div class="ranking-card-label">Année de référence</div>
+        <div class="ranking-card-label">Année Académique</div>
       </div>`;
   }
 
@@ -96,12 +96,12 @@ async function renderMethodologiePage(xml) {
   if (descSection) {
     descSection.innerHTML = `
       <div class="methodo-description fade-up">
-        <h2><span class="icon" aria-hidden="true">📋</span> À propos de ce classement</h2>
+        <h2><span class="icon" aria-hidden="true">📘</span> Présentation du programme</h2>
         <p>${desc}</p>
         ${lien ? `
         <a href="${lien}" target="_blank" rel="noopener noreferrer" class="methodo-link">
           <span class="icon" aria-hidden="true">🔗</span>
-          Consulter le classement officiel
+          Accéder au site officiel du programme
           <span class="icon" aria-hidden="true">↗</span>
         </a>` : ''}
       </div>`;
@@ -109,16 +109,16 @@ async function renderMethodologiePage(xml) {
 }
 
 /**
- * Affiche la liste de toutes les méthodologies (page sans id).
+ * Affiche la liste de tous les programmes (page sans id).
  */
 function renderListeMethodologies(xml, container, nomUniv) {
   UMA.setPageMeta(
-    `Méthodologies de classement – UMA`,
-    `Découvrez les méthodologies des classements internationaux de l'${nomUniv}.`
+    `Programmes & Académique – ${nomUniv}`,
+    `Découvrez les programmes d'études et facultés de ${nomUniv}.`
   );
 
   const heroTitle = document.getElementById('page-hero-title');
-  if (heroTitle) heroTitle.textContent = 'Méthodologies de classement';
+  if (heroTitle) heroTitle.textContent = 'Programmes & Écoles Académiques';
 
   const methodos = Array.from(xml.querySelectorAll('methodologie'));
   const breadcrumb = document.getElementById('methodo-breadcrumb');
@@ -126,7 +126,7 @@ function renderListeMethodologies(xml, container, nomUniv) {
     breadcrumb.innerHTML = `
       <a href="index.html">Accueil</a>
       <span class="sep">›</span>
-      <span>Méthodologies</span>`;
+      <span>Programmes &amp; Académique</span>`;
   }
 
   // Retirer les blocs spécifiques
@@ -144,13 +144,13 @@ function renderListeMethodologies(xml, container, nomUniv) {
       return `
         <div class="methodo-description fade-up ${delay}" style="margin-bottom:1rem">
           <h2>
-            <span class="icon" aria-hidden="true">📊</span> ${nom}
+            <span class="icon" aria-hidden="true">🏛️</span> ${nom}
           </h2>
           <p style="margin:0.5rem 0;color:var(--color-text-muted)">
-            Rang : <strong style="color:var(--color-primary)">${rang}</strong> &nbsp;·&nbsp; Année : ${annee}
+            Spécialités : <strong style="color:var(--color-primary)">${rang}</strong> &nbsp;·&nbsp; Session : ${annee}
           </p>
           <a href="methodologie.html?id=${id}" class="methodo-link" style="margin-top:var(--space-4)">
-            Voir les détails →
+            Découvrir le programme →
           </a>
         </div>`;
     }).join('');
@@ -158,14 +158,14 @@ function renderListeMethodologies(xml, container, nomUniv) {
 }
 
 /**
- * Affiche une page 404 si l'id de méthodologie est introuvable.
+ * Affiche une page 404 si le programme est introuvable.
  */
 function render404(container, id, nomUniv) {
-  UMA.setPageMeta('404 – Méthodologie introuvable');
+  UMA.setPageMeta(`404 – Programme introuvable`);
 
   const heroTitle = document.getElementById('page-hero-title');
   const heroSub   = document.getElementById('page-hero-sub');
-  if (heroTitle) heroTitle.textContent = 'Méthodologie introuvable';
+  if (heroTitle) heroTitle.textContent = 'Programme introuvable';
   if (heroSub)   heroSub.textContent = '';
 
   const rankingShowcase = document.getElementById('ranking-showcase');
@@ -182,8 +182,8 @@ function render404(container, id, nomUniv) {
     descSection.innerHTML = `
       <div class="not-found">
         <div class="nf-code" aria-hidden="true">404</div>
-        <h2>Méthodologie "${id}" introuvable</h2>
-        <p>La méthodologie que vous recherchez n'existe pas ou a été renommée dans le fichier site.xml.</p>
+        <h2>Programme "${id}" introuvable</h2>
+        <p>Le programme académique que vous recherchez n'existe pas ou a été mis à jour.</p>
         <a href="index.html" class="btn-primary" style="margin-top:1rem">
           ← Retour à l'accueil
         </a>
