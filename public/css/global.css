@@ -493,7 +493,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   gap: var(--space-2);
   text-decoration: none;
   transition: filter var(--transition-fast);
-  box-shadow: 0 -2px 12px rgba(200, 169, 81, 0.4);
+  box-shadow: 0 -2px 12px rgba(217, 119, 6, 0.4);
 }
 #btn-officiel:hover {
   filter: brightness(1.08);
@@ -629,7 +629,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .btn-primary:hover {
   background: var(--color-accent-light);
-  box-shadow: 0 4px 16px rgba(200,169,81,0.4);
+  box-shadow: 0 4px 16px rgba(217,119,6,0.4);
   transform: translateY(-1px);
 }
 
