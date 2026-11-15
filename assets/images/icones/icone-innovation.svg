@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <!-- Ampoule -->
+  <path d="M20 6 C13 6 8 11 8 18 C8 23 11 27 15 29 L15 33 L25 33 L25 29 C29 27 32 23 32 18 C32 11 27 6 20 6Z"
+        stroke="white" stroke-width="2" fill="rgba(255,255,255,0.1)"/>
+  <line x1="15" y1="35" x2="25" y2="35" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <line x1="20" y1="12" x2="20" y2="24" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <polyline points="16,17 20,12 24,17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  site.xml — Tous les textes modifiables du site              ║
+  ║  Stanford University — Site Officiel d'Université           ║
+  ║                                                               ║
+  ║  COMMENT MODIFIER CE FICHIER :                                ║
+  ║  Modifiez les textes entre les balises, sauvegardez,         ║
+  ║  rechargez la page dans le navigateur. Aucun redémarrage      ║
+  ║  du serveur n'est nécessaire.                                 ║
+  ╚══════════════════════════════════════════════════════════════╝
+-->
+<site>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- IDENTITÉ DE L'UNIVERSITÉ                                -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <universite>
+    <nom>Stanford University</nom>
+    <nom_court>Stanford</nom_court>
+    <url_officiel>https://www.stanford.edu</url_officiel>
+    <logo>/assets/images/icones/logo-stanford.svg</logo>
+    <favicon>/assets/images/icones/favicon.ico</favicon>
+  </universite>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- NAVIGATION                                              -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <menu>
+    <item id="accueil"       label="Accueil"        url="index.html"/>
+    <item id="methodologie"  label="Programmes &amp; Académique"   url="#">
+      <sous_item id="qs"  label="Offre de Formation"  url="methodologie.html?id=qs">
+        <sous_item id="qs1" label="Undergraduate (Bachelor)"                url="methodologie.html?id=qs1"/>
+        <sous_item id="qs2" label="Graduate &amp; Ph.D. (Master &amp; Doctorat)" url="methodologie.html?id=qs2"/>
+        <sous_item id="qs3" label="École d'Ingénierie &amp; Informatique"   url="methodologie.html?id=qs3"/>
+      </sous_item>
+      <sous_item id="the"  label="Graduate School of Business" url="methodologie.html?id=the"/>
+      <sous_item id="arwu" label="Faculté de Médecine"         url="methodologie.html?id=arwu"/>
+    </item>
+    <item id="evenements"    label="Vie du Campus"  url="evenements.html"/>
+    <item id="rapports"      label="Ressources"     url="rapports.html"/>
+  </menu>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- PAGE D'ACCUEIL                                          -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <accueil>
+    <slogan>Stanford University — Former les esprits créatifs, stimuler l'innovation et servir la société.</slogan>
+    <image_hero>/assets/images/ranking/ranking-hero.jpg</image_hero>
+
+    <presentation>
+      <titre>Une institution mondiale d'enseignement et de recherche</titre>
+      <texte>Fondée en 1885 par Leland et Jane Stanford, Stanford University est l'une des plus éminentes universités de recherche au monde. Située au cœur de la Silicon Valley en Californie, elle réunit sept écoles académiques de premier plan (Humanités, Ingénierie, Médecine, Droit, Droit des affaires, Éducation et Développement Durable) qui préparent les étudiants à repousser les frontières de la connaissance et à relever les grands défis du XXIe siècle.</texte>
+      <image>/assets/images/universite/campus.jpg</image>
+    </presentation>
+
+    <points_forts>
+      <point id="pf1">
+        <titre>Excellence Académique</titre>
+        <description>Plus de 65 majeures de premier cycle et des centaines de programmes de Master et Doctorat enseignés par des professeurs d'élite.</description>
+        <icone>/assets/images/icones/icone-qs.svg</icone>
+      </point>
+      <point id="pf2">
+        <titre>Recherche de Pointe</titre>
+        <description>Des laboratoires de niveau mondial et plus de 80 lauréats du prix Nobel engagés dans des recherches novatrices.</description>
+        <icone>/assets/images/icones/icone-recherche.svg</icone>
+      </point>
+      <point id="pf3">
+        <titre>Esprit d'Innovation</titre>
+        <description>Ancrage unique au cœur de la Silicon Valley favorisant la création d'entreprises, l'incubation et le transfert technologique.</description>
+        <icone>/assets/images/icones/icone-innovation.svg</icone>
+      </point>
+      <point id="pf4">
+        <titre>Vie Étudiante &amp; Campus</titre>
+        <description>Un campus d'exception en Californie proposant plus de 600 associations étudiantes, des équipements sportifs et culturels modernes.</description>
+        <icone>/assets/images/icones/icone-partenariats.svg</icone>
+      </point>
+      <point id="pf5">
+        <titre>Ouverture Internationale</titre>
+        <description>Une communauté académique diversifiée accueillant des étudiants et chercheurs venus de plus de 150 pays.</description>
+        <icone>/assets/images/icones/icone-the.svg</icone>
+      </point>
+      <point id="pf6">
+        <titre>Engagement Écologique</titre>
+        <description>Avec la Doerr School of Sustainability, Stanford est un pionnier de la transition énergétique et de l'éco-responsabilité.</description>
+        <icone>/assets/images/icones/icone-ancrage.svg</icone>
+      </point>
+    </points_forts>
+  </accueil>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- À PROPOS ET CONTACT (footer)                           -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <a_propos>
+    <texte>Bienvenue sur le portail d'information officiel de Stanford University. Découvrez nos programmes d'études, nos centres de recherche, nos événements de campus et nos ressources téléchargeables.</texte>
+  </a_propos>
+
+  <contact>
+    <adresse>450 Jane Stanford Way, Stanford, CA 94305, États-Unis</adresse>
+    <email>admissions@stanford.edu</email>
+    <telephone>+1 (650) 723-2300</telephone>
+    <reseaux>
+      <reseau nom="Facebook"  url="https://www.facebook.com/stanford"/>
+      <reseau nom="LinkedIn"  url="https://www.linkedin.com/school/stanford-university"/>
+      <reseau nom="Twitter"   url="https://twitter.com/stanford"/>
+      <reseau nom="YouTube"   url="https://www.youtube.com/@stanford"/>
+    </reseaux>
+  </contact>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!-- PROGRAMMES & ÉCOLES                                     -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <methodologies>
+
+    <methodologie id="qs">
+      <nom>Offre Académique de Stanford</nom>
+      <description>Stanford University propose une gamme complète d'enseignements structurée autour de sept écoles prestigieuses, combinant rigueur scientifique, créativité et interdisciplinarité.</description>
+      <rang>7 Écoles</rang>
+      <score>17 000+ Étudiants</score>
+      <annee>2024-2025</annee>
+    </methodologie>
+
+    <methodologie id="qs1">
+      <nom>Undergraduate Studies (Premier Cycle - Bachelor)</nom>
+      <description>Le programme de premier cycle de Stanford offre une formation intellectuelle générale et spécialisée dans plus de 65 domaines d'études. Les étudiants bénéficient de classes à effectif réduit, d'un accès précoce aux laboratoires de recherche et d'un mentorat personnalisé.</description>
+      <rang>65+ Majeures</rang>
+      <score>7 000+ Étudiants</score>
+      <annee>2024-2025</annee>
+      <lien>https://www.stanford.edu/academics/undergraduate-study/</lien>
+    </methodologie>
+
+    <methodologie id="qs2">
+      <nom>Graduate &amp; Ph.D. Studies (Master &amp; Doctorat)</nom>
+      <description>Les programmes de deuxième et troisième cycles de Stanford préparent les futurs chercheurs, professeurs et dirigeants d'entreprises. Les étudiants travaillent aux côtés d'experts mondiaux sur des projets novateurs.</description>
+      <rang>90+ Spécialités</rang>
+      <score>10 000+ Doctorants/Masters</score>
+      <annee>2024-2025</annee>
+      <lien>https://www.stanford.edu/academics/graduate-study/</lien>
+    </methodologie>
+
+    <methodologie id="qs3">
+      <nom>School of Engineering &amp; Computer Science</nom>
+      <description>La Faculté d'Ingénierie de Stanford est au cœur des révolutions technologiques depuis des décennies. Ses départements d'Informatique, d'Intelligence Artificielle, d'Électricité et de Bio-ingénierie figurent parmi les plus performants du monde.</description>
+      <rang>9 Départements</rang>
+      <score>Top 1 Global</score>
+      <annee>2024-2025</annee>
+      <lien>https://engineering.stanford.edu/</lien>
+    </methodologie>
+
+    <methodologie id="the">
+      <nom>Stanford Graduate School of Business (GSB)</nom>
+      <description>La Stanford GSB prépare des leaders visionnaires capables de changer les vies, les organisations et le monde. Son programme MBA et ses diplômes d'executive education sont mondialement célèbres pour leur culture d'innovation et d'entrepreneuriat.</description>
+      <rang>MBA &amp; Executive</rang>
+      <score>Top 1 Global</score>
+      <annee>2024-2025</annee>
+      <lien>https://www.gsb.stanford.edu/</lien>
+    </methodologie>
+
+    <methodologie id="arwu">
+      <nom>Stanford School of Medicine</nom>
+      <description>Pionnière en médecine de précision, génomique et immunologie, la Faculté de Médecine de Stanford forme les médecins et chercheurs de demain tout en dispensant des soins de santé d'excellence au sein de Stanford Health Care.</description>
+      <rang>Médecine &amp; Recherche</rang>
+      <score>Hôpitaux Universitaires</score>
+      <annee>2024-2025</annee>
+      <lien>https://med.stanford.edu/</lien>
+    </methodologie>
+
+  </methodologies>
+
+</site>

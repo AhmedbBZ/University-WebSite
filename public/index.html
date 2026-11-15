@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <title>Stanford University – Site Officiel</title>
+  <meta name="description" content="Bienvenue sur le portail officiel d'information de Stanford University : formations, facultés, vie du campus, recherche et ressources.">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="/assets/images/icones/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <!-- ═══ HEADER (injecté par JS) ═══════════════════════════════════════════ -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <!-- ═══ SECTION 1 : HERO ════════════════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Présentation">
+      <div class="hero-bg" id="hero-bg" role="img" aria-label="Campus de Stanford University"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <div class="hero-badge" aria-hidden="true">
+          <span class="dot"></span>
+          <span>Portail Officiel d'Information 2024–2025</span>
+        </div>
+
+        <h1 class="hero-title">
+          <em>Former les esprits créatifs</em><br>
+          &amp; repousser les frontières du savoir
+        </h1>
+
+        <p class="hero-slogan" id="hero-slogan">
+          <!-- Peuplé par index.js depuis le XML -->
+        </p>
+
+        <div class="hero-actions">
+          <a href="methodologie.html?id=qs1" class="btn-primary" id="btn-qs">
+            🎓 Découvrir les Formations →
+          </a>
+          <a href="methodologie.html"
+             style="color:rgba(255,255,255,0.85);font-size:var(--text-sm);text-decoration:underline;text-underline-offset:3px">
+            Explorer nos 7 Écoles &amp; Facultés
+          </a>
+        </div>
+
+        <div class="hero-stats" aria-label="Chiffres clés">
+          <div class="hero-stat">
+            <span class="hero-stat-value" aria-label="Effectif étudiant">17 000+</span>
+            <span class="hero-stat-label">Étudiants</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value" aria-label="Nombre d'écoles académiques">7</span>
+            <span class="hero-stat-label">Écoles &amp; Facultés</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value" aria-label="Année de fondation">1885</span>
+            <span class="hero-stat-label">Fondée en</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Défiler</span>
+        <span class="scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- ═══ SECTION 2 : UNIVERSITÉ ══════════════════════════════════════════ -->
+    <section class="section-universite" id="universite" aria-label="Présentation de l'université">
+      <div class="container">
+        <div class="univ-grid">
+
+          <div class="univ-image-wrap fade-up">
+            <img
+              src="/assets/images/universite/campus.jpg"
+              alt="Campus de Stanford University"
+              id="univ-image"
+              loading="lazy"
+              onerror="this.src='/assets/images/universite/campus-placeholder.jpg';this.onerror=null">
+            <div class="univ-image-badge" aria-hidden="true">Campus de Stanford</div>
+          </div>
+
+          <div class="univ-text fade-up delay-2">
+            <span class="section-label">Notre Institution</span>
+            <h2 class="section-heading" id="univ-titre">
+              <!-- Peuplé par index.js -->
+            </h2>
+            <div class="divider"></div>
+            <p class="section-sub" id="univ-texte">
+              <!-- Peuplé par index.js -->
+            </p>
+            <a href="methodologie.html" class="btn-primary" style="display:inline-flex;margin-top:2rem">
+              Découvrir nos programmes →
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SECTION 3 : POINTS FORTS ════════════════════════════════════════ -->
+    <section class="section-points-forts" id="points-forts" aria-label="Points forts">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Pourquoi Stanford ?</span>
+          <h2 class="section-heading">Nos piliers d'excellence</h2>
+          <div class="divider centered"></div>
+          <p class="section-sub" style="margin-inline:auto;text-align:center">
+            Stanford University s'appuie sur des principes d'excellence et d'innovation pour préparer les leaders de demain.
+          </p>
+        </div>
+
+        <!-- Peuplé par index.js -->
+        <div class="points-grid" id="points-forts-grid" role="list">
+          <!-- Loader initial -->
+          <div class="loader" style="grid-column:1/-1"><div class="spinner"></div></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER (injecté par JS) ════════════════════════════════════════════ -->
+  <div id="footer-placeholder"></div>
+
+  <!-- ═══ SCRIPTS ════════════════════════════════════════════════════════════ -->
+  <script src="js/common.js"></script>
+  <script src="js/index.js"></script>
+
+</body>
+</html>
